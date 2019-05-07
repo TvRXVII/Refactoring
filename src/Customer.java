@@ -51,5 +51,6 @@ class Customer {
     		Rental each = (Rental) enum_rentals.nextElement();
     		result += each.getFrequentRenterPoints();
     	}
+		return result;
     }
 }    
