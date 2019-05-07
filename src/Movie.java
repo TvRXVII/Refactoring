@@ -32,15 +32,15 @@ public class Movie {
         }
     }
     
+    double getCharge(int daysRented) {
+    	return _priceCode.getCharge(daysRented);
+    }
+    
     public String getTitle (){
         return title;
     };
     
-	
 	int getFrequentRenterPoints(int daysRented) {
-		if ((getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1) 
-		    return 2;
-		else
-			return 1;
+		return _priceCode.getFrequentRenterPoints(daysRented);
 	}
 }
